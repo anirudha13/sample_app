@@ -21,11 +21,12 @@
 #   end
 # end
 task :staging do
+    role :app, "52.66.121.54"                          # This may be the same as your `Web` server
+    role :newapp, "52.66.132.185", 
     set :application, "sample_app"
     set :repository,  "https://github.com/anirudha13/sample_app.git"
     set :scm, :git
     set :use_sudo, false
-    set :branch, "master"
+    set(:branch, "master") unless exists?(:branch)
     set :deploy_to, "/home/ubuntu/sample_app"
-    role :app, "52.66.121.54", "52.66.132.185"                          # This may be the same as your `Web` server
 end
