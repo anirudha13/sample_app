@@ -1,9 +1,14 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.12'
+gem 'rails', '3.2.22'
+gem 'rake', '10.5.0'
+gem 'i18n', '0.6.11'
+
+
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'will_paginate', '3.0.pre2'
 gem 'sqlite3', '1.3.4'
+gem 'capistrano', '2.15.4'
 
 group :development do
   gem 'rspec-rails', '2.6.1'
